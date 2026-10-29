@@ -1,1 +1,1123 @@
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Welcome to FARTHER BRO's personal portfolio.
+          Explore my journey in software development, Information
+          Technology, programming, and computer systems.">
+
+    <title>FARTHER BRO | Software Developer Portfolio</title>
+
+    <style>
+        :root {
+            --primary: #1769ff;
+            --dark: #10213d;
+            --text: #344054;
+            --light: #f4f8ff;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            min-height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .logo {
+            color: var(--primary);
+            font-size: 23px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-button {
+            display: none;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 9px 12px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f0f6ff, #ffffff);
+            padding: 100px 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e1edff;
+            color: #1456c0;
+            padding: 7px 15px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--dark);
+            font-size: clamp(38px, 6vw, 65px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #064fc9;
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .button-outline:hover {
+            background: #eaf1ff;
+        }
+
+        .hero-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 12px 40px rgba(23,105,255,0.12);
+            border: 1px solid #e4edff;
+        }
+
+        .avatar {
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1769ff, #61b4ff);
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: 40px;
+            font-weight: 900;
+            margin: 0 auto 20px;
+        }
+
+        .hero-card h2 {
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .hero-card p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        section {
+            padding: 80px 0;
+            scroll-margin-top: 75px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            color: var(--dark);
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        h3 {
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .about-grid p {
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .info-box p {
+            margin-bottom: 8px;
+        }
+
+        .light-section {
+            background: var(--light);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e3eaf5;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover,
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(16,33,61,0.08);
+        }
+
+        .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p,
+        .project-card p {
+            font-size: 14px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e7efff;
+            color: #1456c0;
+            border-radius: 5px;
+            padding: 4px 9px;
+            font-size: 12px;
+            margin: 5px 4px 0 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            border: 1px solid #e3eaf5;
+            border-radius: 14px;
+            padding: 28px;
+            transition: 0.3s;
+            background: white;
+        }
+
+        .project-card h3 {
+            margin-top: 12px;
+        }
+
+        .project-status {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .education-card {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            border: 1px solid #e3eaf5;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .education-card h3 {
+            font-size: 22px;
+        }
+
+        .education-card p {
+            margin-bottom: 10px;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .goal-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e3eaf5;
+        }
+
+        .quote {
+            text-align: center;
+            max-width: 800px;
+            margin: 45px auto 0;
+            padding: 25px;
+            color: var(--primary);
+            font-size: 22px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .contact-box {
+            max-width: 750px;
+            margin: auto;
+            background: var(--light);
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-box p {
+            margin-bottom: 18px;
+        }
+
+        .contact-box input,
+        .contact-box textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 14px;
+            border: 1px solid #ccd6e5;
+            border-radius: 7px;
+            font-family: inherit;
+            font-size: 15px;
+        }
+
+        .contact-box textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-box button {
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
+        }
+
+        .form-note {
+            font-size: 12px;
+            color: #667085;
+            margin-top: 12px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        footer .footer-name {
+            color: #78b0ff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 800px) {
+            .menu-button {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                background: white;
+                flex-direction: column;
+                gap: 15px;
+                box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero-content,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                max-width: 400px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .skills-grid,
+            .goals-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .goals-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .contact-box {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="container">
+        <a href="#home" class="logo">FARTHER BRO.</a>
+
+        <button class="menu-button"
+                id="menuButton"
+                aria-label="Open navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HOME SECTION -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <div>
+                <span class="badge">
+                    Welcome to My Digital World
+                </span>
+
+                <h1>
+                    Hi, I'm <span class="highlight">FARTHER BRO</span>
+                </h1>
+
+                <h2>Software Developer in the Making</h2>
+
+                <p>
+                    I am an aspiring software developer and Information
+                    Technology student passionate about programming,
+                    web development, computer systems, and innovative
+                    technology. My journey is about learning, building,
+                    solving problems, and turning ideas into digital
+                    solutions.
+                </p>
+
+                <div class="buttons">
+                    <a href="#projects" class="button button-primary">
+                        Explore My Projects
+                    </a>
+
+                    <a href="#about" class="button button-outline">
+                        About Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="avatar">FB</div>
+
+                <h2>FARTHER BRO</h2>
+
+                <p>IT Student | Aspiring Software Developer</p>
+
+                <p>Kenya 🇰🇪</p>
+
+                <p style="margin-top: 15px;">
+                    Learning Today. Building Tomorrow.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>
+                    Discover my background, interests, values,
+                    and journey into the world of technology.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <div>
+                    <h3>Who Is FARTHER BRO?</h3>
+
+                    <p>
+                        My name is FARTHER BRO. I am an Information
+                        Technology student at Kibabii University
+                        in Kenya, working toward my goal of becoming
+                        a skilled software developer.
+                    </p>
+
+                    <p>
+                        My interest in technology comes from wanting
+                        to understand how computers work, how
+                        applications are created, and how software
+                        can solve everyday problems.
+                    </p>
+
+                    <p>
+                        I am developing my knowledge of programming,
+                        website development, software engineering,
+                        networking, cybersecurity, and computer
+                        systems. I believe that practical experience
+                        is an important part of becoming a successful
+                        developer.
+                    </p>
+
+                    <p>
+                        This portfolio is where I will document
+                        my progress, showcase my projects, and
+                        continue growing as a technology enthusiast.
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <h3>My Profile</h3>
+
+                    <p><strong>Name:</strong> FARTHER BRO</p>
+
+                    <p>
+                        <strong>Field:</strong>
+                        Information Technology
+                    </p>
+
+                    <p>
+                        <strong>Institution:</strong>
+                        Kibabii University
+                    </p>
+
+                    <p>
+                        <strong>Location:</strong> Kenya
+                    </p>
+
+                    <p>
+                        <strong>Professional Goal:</strong>
+                        Software Developer
+                    </p>
+
+                    <p>
+                        <strong>Interests:</strong>
+                        Programming, technology, and innovation
+                    </p>
+
+                    <p>
+                        <strong>Approach:</strong>
+                        Learn, practise, build, and improve
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="light-section" id="skills">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>My Technical Skills</h2>
+                <p>
+                    Technologies and technical areas I am learning
+                    and developing through study and practice.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+
+                <article class="skill-card">
+                    <div class="icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Learning to create websites using HTML
+                        for structure, CSS for design, and
+                        JavaScript for interactive features.
+                    </p>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </article>
+
+                <article class="skill-card">
+                    <div class="icon">💻</div>
+                    <h3>Programming</h3>
+                    <p>
+                        Developing logical thinking, understanding
+                        programming concepts, writing code, and
+                        solving computational problems.
+                    </p>
+                    <span class="tag">C Programming</span>
+                    <span class="tag">Logic</span>
+                </article>
+
+                <article class="skill-card">
+                    <div class="icon">⚙️</div>
+                    <h3>Software Engineering</h3>
+                    <p>
+                        Studying how software is planned, designed,
+                        developed, tested, maintained, and improved.
+                    </p>
+                    <span class="tag">SDLC</span>
+                    <span class="tag">Testing</span>
+                </article>
+
+                <article class="skill-card">
+                    <div class="icon">🔐</div>
+                    <h3>Cybersecurity</h3>
+                    <p>
+                        Exploring computer security, encryption,
+                        safe computing, access control, and
+                        protection of digital information.
+                    </p>
+                    <span class="tag">Security Basics</span>
+                    <span class="tag">Encryption</span>
+                </article>
+
+                <article class="skill-card">
+                    <div class="icon">🌍</div>
+                    <h3>Computer Networking</h3>
+                    <p>
+                        Learning about IP addresses, network
+                        configuration, routers, switches, and
+                        communication between computers.
+                    </p>
+                    <span class="tag">IP Addressing</span>
+                    <span class="tag">Networking</span>
+                </article>
+
+                <article class="skill-card">
+                    <div class="icon">🖥️</div>
+                    <h3>Computer Systems</h3>
+                    <p>
+                        Exploring operating systems, computer
+                        hardware, software applications, and
+                        how computer components work together.
+                    </p>
+                    <span class="tag">Operating Systems</span>
+                    <span class="tag">IT Fundamentals</span>
+                </article>
+
+            </div>
+
+            <p style="text-align:center; margin-top:25px;">
+                I am continuously improving these skills through
+                university studies, independent learning, and
+                practical projects.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>My Projects</h2>
+                <p>
+                    A collection of my practical work, experiments,
+                    and applications as I grow in software development.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <span class="project-status">
+                        Project 001 · Current
+                    </span>
+
+                    <div class="icon">👨‍💻</div>
+
+                    <h3>Personal Portfolio Website</h3>
+
+                    <p>
+                        A responsive personal website introducing
+                        FARTHER BRO, documenting my technology
+                        journey, presenting my interests, and
+                        showcasing my growing collection of projects.
+                    </p>
+
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </article>
+
+                <article class="project-card">
+                    <span class="project-status">
+                        Planned Project
+                    </span>
+
+                    <div class="icon">🧮</div>
+
+                    <h3>Calculator Application</h3>
+
+                    <p>
+                        A future calculator project designed to
+                        practise mathematical operations, user
+                        input, programming logic, and interactive
+                        application development.
+                    </p>
+
+                    <span class="tag">Programming</span>
+                    <span class="tag">Problem-Solving</span>
+                </article>
+
+                <article class="project-card">
+                    <span class="project-status">
+                        Planned Project
+                    </span>
+
+                    <div class="icon">📚</div>
+
+                    <h3>Student Management System</h3>
+
+                    <p>
+                        A planned application for practising
+                        student record management, data storage,
+                        searching, updating information, and
+                        database concepts.
+                    </p>
+
+                    <span class="tag">Software Development</span>
+                    <span class="tag">Databases</span>
+                </article>
+
+                <article class="project-card">
+                    <span class="project-status">
+                        Planned Project
+                    </span>
+
+                    <div class="icon">💰</div>
+
+                    <h3>Expense Tracker</h3>
+
+                    <p>
+                        A planned application that will help users
+                        record expenses, organise transactions,
+                        and understand their spending habits.
+                    </p>
+
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Data Management</span>
+                </article>
+
+            </div>
+
+            <p style="text-align:center; margin-top:25px;">
+                Planned projects will be added to my portfolio
+                as I develop and complete them.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="light-section" id="education">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Education & Learning</h2>
+                <p>
+                    Building a strong academic and practical
+                    foundation for a future in technology.
+                </p>
+            </div>
+
+            <div class="education-card">
+
+                <div class="icon">🎓</div>
+
+                <h3>Kibabii University</h3>
+
+                <p><strong>Programme:</strong>
+                    Bachelor of Information Technology
+                </p>
+
+                <p><strong>Level:</strong> First Year</p>
+
+                <p><strong>Country:</strong> Kenya</p>
+
+                <p>
+                    My university studies provide a foundation
+                    in computing, programming, information systems,
+                    mathematics, communication, and other areas
+                    relevant to Information Technology.
+                </p>
+
+                <h3 style="margin-top:25px;">
+                    My Learning Goals
+                </h3>
+
+                <p>
+                    • Strengthen my programming fundamentals.
+                </p>
+
+                <p>
+                    • Build useful websites and applications.
+                </p>
+
+                <p>
+                    • Understand software engineering principles.
+                </p>
+
+                <p>
+                    • Improve my networking and cybersecurity knowledge.
+                </p>
+
+                <p>
+                    • Develop a portfolio of completed projects.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION AND VISION -->
+    <section id="goals">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>My Mission, Vision & Values</h2>
+                <p>
+                    The principles guiding my personal development
+                    and journey in software development.
+                </p>
+            </div>
+
+            <div class="goals-grid">
+
+                <article class="goal-card">
+                    <div class="icon">🎯</div>
+                    <h3>My Mission</h3>
+                    <p>
+                        To build practical technology skills
+                        and create useful digital solutions
+                        through learning, creativity, and
+                        consistent practice.
+                    </p>
+                </article>
+
+                <article class="goal-card">
+                    <div class="icon">🚀</div>
+                    <h3>My Vision</h3>
+                    <p>
+                        To become a competent software developer
+                        who creates innovative applications,
+                        solves real-world problems, and
+                        contributes positively to society.
+                    </p>
+                </article>
+
+                <article class="goal-card">
+                    <div class="icon">🤝</div>
+                    <h3>My Values</h3>
+                    <p>
+                        Hard work, integrity, discipline,
+                        curiosity, creativity, teamwork,
+                        continuous learning, and determination.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="quote">
+                "Small beginnings lead to great achievements."
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="light-section" id="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Contact Me</h2>
+                <p>
+                    Have a question, an idea, or an opportunity
+                    to discuss? You can prepare a message below.
+                </p>
+            </div>
+
+            <div class="contact-box">
+
+                <h3>Let's Connect!</h3>
+
+                <p>
+                    I welcome opportunities to learn, exchange
+                    ideas, collaborate on projects, and connect
+                    with people interested in technology.
+                </p>
+
+                <form id="contactForm">
+
+                    <input
+                        type="text"
+                        id="visitorName"
+                        placeholder="Your name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="visitorEmail"
+                        placeholder="Your email address"
+                        required
+                    >
+
+                    <textarea
+                        id="visitorMessage"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="button button-primary"
+                    >
+                        Prepare Email Message
+                    </button>
+
+                </form>
+
+                <p class="form-note">
+                    This form opens your email application to
+                    prepare a message. It does not send or store
+                    messages on this website.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+
+        <p class="footer-name">FARTHER BRO</p>
+
+        <p>
+            Aspiring Software Developer | IT Student | Technology Enthusiast
+        </p>
+
+        <p>
+            Learning Today. Building Tomorrow.
+        </p>
+
+        <p>
+            &copy; <span id="year"></span> FARTHER BRO.
+            All rights reserved.
+        </p>
+
+    </div>
+</footer>
+
+<script>
+    // Automatically display the current year.
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    // Mobile navigation menu.
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+
+    menuButton.addEventListener("click", function () {
+        const isOpen = navLinks.classList.toggle("open");
+
+        menuButton.setAttribute("aria-expanded", isOpen);
+        menuButton.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close the menu after a navigation link is selected.
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            navLinks.classList.remove("open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.textContent = "☰";
+        });
+    });
+
+    // Prepare an email using the visitor's email application.
+    document.getElementById("contactForm").addEventListener(
+        "submit",
+        function (event) {
+            event.preventDefault();
+
+            const name =
+                document.getElementById("visitorName").value.trim();
+
+            const email =
+                document.getElementById("visitorEmail").value.trim();
+
+            const message =
+                document.getElementById("visitorMessage").value.trim();
+
+            const subject = encodeURIComponent(
+                "Portfolio enquiry from " + name
+            );
+
+            const body = encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\nMessage:\n" + message
+            );
+
+            // Replace this placeholder with your real email address.
+            const yourEmail = "YOUR_EMAIL@example.com";
+
+            if (yourEmail === "YOUR_EMAIL@example.com") {
+                alert(
+                    "The website is working! To enable email contact, " +
+                    "replace YOUR_EMAIL@example.com in the code with " +
+                    "your real email address."
+                );
+                return;
+            }
+
+            window.location.href =
+                "mailto:" + wanjalabukhebi@gmail.com +
+                "?subject=" + subject +
+                "&body=" + body;
+        }
+    );
+</script>
+
+</body>
+                      </html>
