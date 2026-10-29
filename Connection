@@ -1,0 +1,33 @@
+
+<!-- FARTHER BRO - WhatsApp & M-Pesa Floating Buttons -->
+<style>
+.fab-container{position:fixed;bottom:20px;right:20px;z-index:999;display:flex;flex-direction:column;gap:12px}
+.fab{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:28px;box-shadow:0 4px 12px rgba(0,0,0,0.3);text-decoration:none;transition:0.3s}
+.fab:hover{transform:scale(1.1)}
+.wa{background:#25D366} .mpesa{background:#00A651}
+.fab-label{position:absolute;right:70px;background:#111;color:white;padding:6px 12px;border-radius:8px;font-size:13px;white-space:nowrap;display:none}
+.fab:hover .fab-label{display:block}
+</style>
+
+<div class="fab-container">
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/254788843298?text=Hi%20FARTHER%20BRO,%20nimeona%20website%20yako%20nataka%20App" class="fab wa" target="_blank">
+    <span class="fab-label">Chat on WhatsApp</span>
+    💬
+  </a>
+  
+  <!-- M-Pesa / Call Button -->
+  <a href="tel:+254788843298" class="fab mpesa">
+    <span class="fab-label">Call / M-Pesa: 0788843298</span>
+    📞
+  </a>
+</div>
+
+<!-- Popup ya M-Pesa kwa Desktop -->
+<script>
+setTimeout(()=>{
+ if(confirm("Karibu FARTHER BRO! 👋\nUnataka App ya kanisa/biashara?\nBonyeza OK uni-WhatsApp!")){
+   window.open("https://wa.me/254788843298","_blank");
+ }
+}, 3000);
+</script>
