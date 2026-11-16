@@ -2618,3 +2618,63 @@ FAITH • FOCUS • HARD WORK
   }
 };
 
+
+const FARTHER_BRO_WORKER =
+"https://YOUR-FARTHER BRO.SOFRTWARE DEVELOPER.workers.dev";
+
+const form = document.getElementById("fb-form");
+const input = document.getElementById("fb-question");
+const chat = document.getElementById("fb-chat");
+const send = document.getElementById("fb-send");
+
+function showMessage(message, sender) {
+  const div = document.createElement("div");
+  div.className = "fb-message " + sender;
+  div.textContent = message;
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+  return div;
+}
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const question = input.value.trim();
+  if (!question || send.disabled) return;
+
+  showMessage(question, "user");
+  input.value = "";
+
+  const answerBox = showMessage(
+    "FARTHER BRO AI is thinking...",
+    "bot"
+  );
+
+  send.disabled = true;
+
+  try {
+    const response = await fetch(FARTHER_BRO_WORKER, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ question })
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.error || "AI connection failed");
+    }
+
+    answerBox.textContent = result.answer;
+
+  } catch (error) {
+    answerBox.textContent =
+      "FARTHER BRO AI Error: " + error.message;
+  } finally {
+    send.disabled = false;
+    input.focus();
+    chat.scrollTop = chat.scrollHeight;
+  }
+});
