@@ -4327,265 +4327,331 @@ CHAT WITH FARTHER BRO ON WHATSAPP
     </section>
   </main>
 
-  <script src="script.js"></script>
-</body>
-</html>
-:root {
-  --bg: #0f172a;
-  --surface: #1e293b;
-  --surface-hover: #273549;
-  --text: #f8fafc;
-  --muted: #94a3b8;
-  --accent: #38bdf8;
-  --accent-hover: #0284c7;
-  --positive: #22c55e;
-  --negative: #ef4444;
-  --border: #334155;
-  --radius: 12px;
-}
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+<style>
+/* FARTHER BRO SERVICES SECTION */
+.fb-section {
+  padding: 55px 20px;
+  margin: 20px auto;
+  max-width: 1100px;
+  font-family: Arial, sans-serif;
+  color: inherit;
 }
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
-  padding: 1.5rem 1rem;
+.fb-section h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 12px;
 }
-
-.app-container {
-  max-width: 540px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.fb-intro {
+  text-align: center;
+  line-height: 1.7;
+  margin: 0 auto 30px;
+  max-width: 750px;
 }
-
-.app-header {
+.fb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+.fb-card {
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  background: rgba(128,128,128,0.06);
+  line-height: 1.7;
+}
+.fb-card h3 {
+  color: #159447;
+  margin-top: 0;
+}
+.fb-price {
+  font-size: 21px;
+  font-weight: bold;
+  color: #159447;
+}
+.fb-button {
+  display: inline-block;
+  background: #159447;
+  color: white !important;
+  text-decoration: none;
+  padding: 13px 23px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+.fb-button:hover {
+  background: #087536;
+}
+.fb-center {
   text-align: center;
 }
-
-.app-header h1 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+.fb-faq details {
+  padding: 17px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
-
-.app-header p {
-  color: var(--muted);
-  font-size: 0.9rem;
+.fb-faq summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #159447;
 }
-
-/* Summary Cards */
-.summary-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+.fb-faq p {
+  line-height: 1.7;
 }
-
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1rem;
+.fb-project a {
+  color: #159447;
+  font-weight: bold;
 }
-
-.balance-card {
-  grid-column: 1 / -1;
+.fb-contact {
+  background: #102b20;
+  color: white;
   text-align: center;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding: 45px 20px;
+  border-radius: 16px;
 }
-
-.card .label {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--muted);
+.fb-contact h2 {
+  color: white;
 }
-
-.balance-card h2 {
-  font-size: 2rem;
-  margin-top: 0.25rem;
-  color: var(--accent);
-}
-
-.amount {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-top: 0.25rem;
-}
-
-.positive { color: var(--positive); }
-.negative { color: var(--negative); }
-
-/* Form Section */
-.form-section,
-.history-section {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem;
-}
-
-h3 {
-  font-size: 1.05rem;
-  margin-bottom: 1rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  margin-bottom: 0.85rem;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-}
-
-label {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-input,
-select {
-  width: 100%;
-  padding: 0.65rem 0.75rem;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--bg);
-  color: var(--text);
-  font-size: 0.95rem;
-}
-
-input:focus,
-select:focus {
-  outline: 2px solid var(--accent);
-  border-color: transparent;
-}
-
-.btn-primary {
-  width: 100%;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  background: var(--accent);
-  color: #0f172a;
-  font-weight: 700;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.btn-primary:hover {
-  background: var(--accent-hover);
-  color: #fff;
-}
-
-/* History Section */
-.history-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.history-header h3 {
-  margin-bottom: 0;
-}
-
-.history-controls {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.history-controls select {
-  padding: 0.35rem 0.5rem;
-  font-size: 0.85rem;
-}
-
-.btn-danger {
-  padding: 0.35rem 0.65rem;
-  border: 1px solid var(--negative);
-  background: transparent;
-  color: var(--negative);
-  border-radius: 6px;
-  font-size: 0.8rem;
-  cursor: pointer;
-}
-
-.btn-danger:hover {
-  background: var(--negative);
-  color: #fff;
-}
-
-.transaction-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.transaction-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--bg);
-  padding: 0.75rem 0.9rem;
-  border-radius: 8px;
-  border-left: 4px solid transparent;
-    <style>
-.farther-profile {
-    text-align: center;
-    padding: 45px 15px;
-    background: linear-gradient(135deg,#020617,#003366);
-    color: white;
-}
-
-.farther-profile img {
-    width: 190px;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 4px solid #00bfff;
-    box-shadow: 0 0 25px #00bfff;
-}
-
-.farther-profile h1 {
-    color: #00bfff;
-    font-size: 30px;
-}
-
-.farther-profile p {
-    font-size: 17px;
-    line-height: 1.7;
+@media(max-width:600px) {
+  .fb-section h2 {font-size:25px;}
+  .fb-section {padding:35px 15px;}
 }
 </style>
 
-<section class="farther-profile">
+<!-- OUR SERVICES -->
+<section class="fb-section" id="services">
+  <h2>Our Professional Services</h2>
+  <p class="fb-intro">
+    FARTHER BRO provides affordable website development,
+    software development, application development and
+    digital technology solutions for individuals,
+    businesses, schools and organizations in Kenya.
+  </p>
 
-    <img src="farther-bro-profile.jpg"
-         alt="FARTHER BRO Profile">
+  <div class="fb-grid">
+    <div class="fb-card">
+      <h3>Business Website</h3>
+      <p>Professional websites to help businesses establish an online presence, showcase products and connect with customers.</p>
+      <p class="fb-price">From KSh 5,000</p>
+      <a class="fb-button" href="https://wa.me/254757349364?text=Hello%20FARTHER%20BRO%2C%20I%20need%20a%20business%20website.">Request Service</a>
+    </div>
 
-    <h1>FARTHER BRO</h1>
+    <div class="fb-card">
+      <h3>School & Church Websites</h3>
+      <p>Modern websites for schools, churches and organizations to share information, announcements and activities.</p>
+      <p class="fb-price">From KSh 8,000</p>
+      <a class="fb-button" href="https://wa.me/254757349364?text=Hello%20FARTHER%20BRO%2C%20I%20need%20a%20school%20or%20church%20website.">Request Service</a>
+    </div>
 
-    <h2>Junior Software Developer</h2>
+    <div class="fb-card">
+      <h3>Portfolio Websites</h3>
+      <p>Personal portfolio websites for students, developers, professionals and creatives to showcase their work.</p>
+      <p class="fb-price">From KSh 3,000</p>
+      <a class="fb-button" href="https://wa.me/254757349364?text=Hello%20FARTHER%20BRO%2C%20I%20need%20a%20portfolio%20website.">Request Service</a>
+    </div>
 
-    <p>
-       Dream • Code • Innovate • Achieve
-    </p>
+    <div class="fb-card">
+      <h3>AI Applications</h3>
+      <p>Explore FARTHER BRO AI and discover interactive artificial intelligence experiences.</p>
+      <p class="fb-price">Free to explore</p>
+      <a class="fb-button" href="https://wa.me/254757349364?text=Hello%20FARTHER%20BRO%2C%20tell%20me%20about%20your%20AI%20application.">Learn More</a>
+    </div>
 
-    <p>
-       Welcome to FARTHER BRO –
-       Turning Ideas into Digital Solutions.
-    </p>
+    <div class="fb-card">
+      <h3>Software Development</h3>
+      <p>Creative software projects, programming solutions and practical digital applications.</p>
+      <a class="fb-button" href="https://wa.me/254757349364?text=Hello%20FARTHER%20BRO%2C%20I%20have%20a%20software%20project.">Discuss Project</a>
+    </div>
 
+    <div class="fb-card">
+      <h3>Website Maintenance</h3>
+      <p>Website updates, improvements, content changes and technical assistance.</p>
+      <a class="fb-button" href="https://wa.me/254757349364?text=Hello%20FARTHER%20BRO%2C%20I%20need%20website%20maintenance.">Get Support</a>
+    </div>
+  </div>
 </section>
+
+<!-- WHY CHOOSE US -->
+<section class="fb-section" id="why-choose-us">
+  <h2>Why Choose FARTHER BRO?</h2>
+  <p class="fb-intro">
+    We focus on creating useful, affordable and accessible
+    digital solutions that help turn ideas into reality.
+  </p>
+
+  <div class="fb-grid">
+    <div class="fb-card">
+      <h3>Affordable Solutions</h3>
+      <p>Digital services with accessible starting prices for individuals and businesses.</p>
+    </div>
+    <div class="fb-card">
+      <h3>Fast Delivery</h3>
+      <p>Our target is to deliver suitable small website projects within approximately three days, depending on requirements.</p>
+    </div>
+    <div class="fb-card">
+      <h3>English & Kiswahili</h3>
+      <p>We communicate with customers in both English and Kiswahili.</p>
+    </div>
+    <div class="fb-card">
+      <h3>Modern Designs</h3>
+      <p>Clean, responsive and user-friendly digital experiences.</p>
+    </div>
+    <div class="fb-card">
+      <h3>Customer Support</h3>
+      <p>We value communication, feedback and continued customer assistance.</p>
+    </div>
+    <div class="fb-card">
+      <h3>Creative Innovation</h3>
+      <p>We explore modern technology to develop practical solutions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR PROCESS -->
+<section class="fb-section" id="process">
+  <h2>How We Work</h2>
+  <p class="fb-intro">A simple process to transform your idea into a digital solution.</p>
+  <div class="fb-grid">
+    <div class="fb-card">
+      <h3>01. Contact Us</h3>
+      <p>Tell us about your idea or project.</p>
+    </div>
+    <div class="fb-card">
+      <h3>02. Planning</h3>
+      <p>We discuss your requirements, budget and preferred features.</p>
+    </div>
+    <div class="fb-card">
+      <h3>03. Development</h3>
+      <p>We work on designing and developing your project.</p>
+    </div>
+    <div class="fb-card">
+      <h3>04. Delivery</h3>
+      <p>We present the completed work and provide guidance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE PROJECTS -->
+<section class="fb-section fb-project" id="projects">
+  <h2>Our Digital Projects</h2>
+  <p class="fb-intro">
+    Explore our technology projects and practical
+    software development work.
+  </p>
+
+  <div class="fb-grid">
+    <div class="fb-card">
+      <h3>FARTHER BRO Portfolio</h3>
+      <p>Our official portfolio showcasing technology,
+      digital services and development work.</p>
+      <a href="https://wanjalabukhebi-pixel.github.io/Farther-bro-portfolio/" target="_blank" rel="noopener">Visit Portfolio →</a>
+    </div>
+
+    <div class="fb-card">
+      <h3>FARTHER BRO AI</h3>
+      <p>An AI-powered project exploring interactive
+      question-and-answer technology.</p>
+      <p>Explore it through the official portfolio.</p>
+      <a href="https://wanjalabukhebi-pixel.github.io/Farther-bro-portfolio/" target="_blank" rel="noopener">Explore Project →</a>
+    </div>
+
+    <div class="fb-card">
+      <h3>Calculator Application</h3>
+      <p>A practical programming project demonstrating
+      mathematical operations and application development.</p>
+      <p>More project updates coming soon.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="fb-section fb-faq" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <p class="fb-intro">
+    Find answers to common questions about our website
+    development and technology services in Kenya.
+  </p>
+
+  <details>
+    <summary>How much does a website cost in Kenya?</summary>
+    <p>Website prices depend on design and features.
+    FARTHER BRO portfolio websites start from KSh 3,000,
+    business websites from KSh 5,000 and school or church
+    websites from KSh 8,000.</p>
+  </details>
+
+  <details>
+    <summary>How long does it take to build a website?</summary>
+    <p>Simple website projects may take approximately
+    three days, depending on the project requirements,
+    content and revisions.</p>
+  </details>
+
+  <details>
+    <summary>Do you build websites in Bungoma?</summary>
+    <p>Yes. FARTHER BRO welcomes website development
+    enquiries from Bungoma County and across Kenya.</p>
+  </details>
+
+  <details>
+    <summary>Can you create a website for my business?</summary>
+    <p>Yes. We develop business websites to help
+    organizations establish their online presence.</p>
+  </details>
+
+  <details>
+    <summary>Do you develop school websites?</summary>
+    <p>Yes. We offer website development services
+    for schools and educational organizations.</p>
+  </details>
+
+  <details>
+    <summary>Can students get personal portfolio websites?</summary>
+    <p>Yes. We create portfolio websites for students,
+    developers and professionals to showcase their skills
+    and projects.</p>
+  </details>
+
+  <details>
+    <summary>Do you develop mobile applications?</summary>
+    <p>We work on mobile application development
+    and practical software projects.</p>
+  </details>
+
+  <details>
+    <summary>How can I request a quotation?</summary>
+    <p>Contact FARTHER BRO through WhatsApp.
+    Explain your project and we will discuss the
+    requirements and estimated cost.</p>
+  </details>
+
+  <details>
+    <summary>Do you communicate in Kiswahili?</summary>
+    <p>Yes. We communicate in English and Kiswahili.</p>
+  </details>
+</section>
+
+<!-- CONTACT -->
+<section class="fb-section" id="contact">
+  <div class="fb-contact">
+    <h2>Let's Build Something Amazing!</h2>
+    <p>
+      Ready to take your business, school or personal
+      brand online? Have an idea for a software project?
+    </p>
+    <p>
+      Contact FARTHER BRO today and let's discuss
+      how technology can help you.
+    </p>
+    <p><strong>Location:</strong> Bungoma County, Kenya</p>
+    <p><strong>Services:</strong> Website Development,
+    Software Development and Digital Solutions</p>
+    <a class="fb-button"
+       href="https://wa.me/254757349364?text=Hello%20FARTHER%20BRO%2C%20I%20am%20interested%20in%20your%20services."
+       target="_blank" rel="noopener">
+       WhatsApp FARTHER BRO Now
+    </a>
+  </div>
+    </section>
+    
